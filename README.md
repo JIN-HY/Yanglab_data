@@ -23,7 +23,21 @@ We focus on population-wide omics datasets. By curating these existing datasets,
   - Tunable genotyping by sequencing (tGBS) ~350 lines ([Miao et al., 2020](https://academic.oup.com/plphys/article/183/4/1898/6118529))
     - Data on [Figshare](https://figshare.com/articles/dataset/Untitled_Item/11462469) 
 
-#### Genotype on V5
+#### Sorghum SNP Calling on V5:
+
+- Raw input data (`trimmed fastq`) were copied from Hongyu: `/work/jyanglab/subhash/variant_calling/1.trimmed_data/`
+- Data folders: `/work/jyanglab/subhash/variant_calling`
+- Code: `profiling/1.variant_calling/`
+
+- Important files: 
+  - reference genome: `/work/jyanglab/subhash/variant_calling/2.refrence/Phytozome/PhytozomeV13/Sbicolor/v5.1/assembly/Sbicolor_730_v5.0.fa`
+  - Deduplicated BAM files: `/work/jyanglab/subhash/variant_calling/4.picard/` (n: 400 bam files)
+  - gVCF file: `/work/jyanglab/subhash/variant_calling/5.gvcf/*.g.vcf`
+  - Raw VCF file: `/work/jyanglab/subhash/variant_calling/9.gvcf_to_vcf/3.merged_vcf/RAW_SAP_BQSR.vcf.gz` (116G)
+  - A filtered VCF file: `/work/jyanglab/subhash/variant_calling/9.gvcf_to_vcf/4.filtering/1.annotate/SAP_V5_annotate.vcf` (289G)
+
+- Label correction:
+  - 22 genotypes showed mismatched labels between SNPs called from genomic and RNAseq datasets `data/xlabels.xlsx`
 
 ## RNA-seq
   - Files with RNA-Seq-based markers called through GATK and gene expression normalized as Transcripts per million (TPM) are deposited at [OneDrive](https://uofnelincoln-my.sharepoint.com/:f:/g/personal/gxu6_unl_edu/EuJn6RPpm-FKuU9FKNs9Qg8Bpk_r52zMLq8WbqxNDgeqSQ?e=t9G35u).
